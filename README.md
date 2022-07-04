@@ -88,3 +88,49 @@ Plot for each configuration: T (with observations) + S (with observations) + dh+
 
 Toolboxes: `EuroSea_toolbox.py`, `deriv_tools.py`, `Tools_OI.py`
 
+### 3_evaluation
+
+*Objective: Compare reconstructed fields to the ocean truth and find the best sampling strategies*
+
+(1) `Step00b_interpolate_eNATL60_2D_outputs.py`
+
+Interpolate eNATL60 2D (surface) fields onto a regular grid.
+
+(1) `Step09b_extract_reconstructed_data_for_comparison_spatio-temporal_OI.py`
+
+Extract reconstructed data at the upper layer to do comparisons in Step 12. Save data with the same format as the ocean truth .pkl file.
+
+(2) `Step09c_figures_reconstructed_fields_all_spatio-temporal_OI.py`
+
+Reconstructed fields: Plot 1 figure for each region, model and variable, including all configurations. Variables: dh, geostrophic velocity magnitude and geostrophic Ro. For comparison between configurations and with the ocean truth. [Figures published in D2.3]
+
+(3) `Step10b_extract_model_data_for_figures_spatio-temporal_OI.py` 
+
+Extract 2D model data (ocean truth) within the configuration domain and linearly interpolate model fields to the time of the OI map. Save fields.
+
+(4) `Step11b_figures_model_SSH_speed_Ro_spatio-temporal_OI.py` 
+
+Ocean truth: Plot 1 figure for each region, model and variable, including all configurations. Variables: SSH, total horizontal velocity magnitude (speed) and Ro computed from total horizontal velocity. For comparison with reconstructed fields. [Figures published in D2.3]
+
+(5) `Step10c_extract_model_data_for_comparison_spatio-temporal_OI_bigger_domain.py`
+
+Extract 2D model data within a domain bigger than the corresponding configuration and linearly interpolate model fields to the time of the OI map. (for CMEMS 3D data, we use data at the upper layer). Save fields, to be used in Step12f.
+
+(6) `Step12f_compute_statistics_spatio-temporal_OI_limit_domain.py`
+
+This codes does:
+
+1.	Open reconstructed and model fields (saved in a bigger domain than the corresponding configuration in Step10c).
+2.	Interpolate model fields (ssh, ut, vt, speed, Ro) onto the reconstruction grid.
+3.	Limit model and reconstructed data within the configuration 2a domain.
+4.	Compute DH anomaly and SSH anomaly. Spatial average over configuration 2a domain. 
+5.	Calculate RMSE-based score between reconstructed and model fields.                  https://github.com/ocean-data-challenges/2020a_SSH_mapping_NATL60/blob/master/notebooks/example_data_eval.ipynb
+6.	Save RMSE-based score in a .pkl file for each field.
+7.	Plot table and figure of the RMSE-based score. (Only plot figures for DH and geostrophic velocity magnitude.)
+
+(7) `Step13a_comparison_statistics_spatio-temporal_OI_best_configurations_ranking_all.py`
+
+Leaderboard based on the RMSEs calculated in Step12f for the Mediterranean and Atlantic [D2.3].
+
+Toolboxes: `EuroSea_toolbox.py`, `deriv_tools.py`
+

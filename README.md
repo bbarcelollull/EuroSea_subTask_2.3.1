@@ -19,7 +19,7 @@ The analysis  focuses on two regions of interest: **(i) the western Mediterranea
 
 The full analysis will be published soon in D2.3 at the [EuroSea website](https://eurosea.eu/).
 
-## The codes:
+## The codes
 
 The codes are organized into 3 folders:
 - 1_simulate_observations

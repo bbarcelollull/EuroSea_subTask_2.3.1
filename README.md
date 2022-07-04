@@ -18,19 +18,46 @@ The analysis  focuses on two regions of interest: **(i) the western Mediterranea
 
 ## The codes:
 
-### Simulation of CTD observations from different platforms (rosette, underway CTD, gliders) and ADCP observations
+The codes are organized into 3 folders:
+- 1_simulate_observations
+- 2_reconstruct_observations_spatiotemporal_OI
+- 3_evaluation
 
-- 2 subregions of about 15ºx10º  (WESTMED and NANFL) 
-- 2D surface fields extracted:  SSH, SST, SSS, U, V, lon, lat
-- Currents: U,V at 15 m and at the surface.
-- Period: 1 year (between 1-july-2009 and 30-june-2010)
-- Fields available at native resolution (1/60º, hourly) 
-- Fields also available at downgraded resolution (1/20º, daily) 
-- +(NEMO mask,mesh files to describe the model grid)
-- as of today this data is available upon request, contact us or the [MEOM group@IGE, Grenoble](https://meom-group.github.io/).
+Here there is a step-by-step description with the corresponding codes. 
 
-**Pseudo-obs  generated from the above model outputs and for the 2 subregions:**
+### 1_simulate_observations
 
-- pseudo-SWOT (swath and nadir, both for the sampling and science phase) [[data and info here](./swot_pseudoobs.md)],
-- pseudo alongtrack SENTINEL3,  SARAL, ENVISAT [[data and info here](./nadir_alongtrack.md)],
-- Lagrangian particles (pseudo-drifters) in the MEDWEST subregion [[data and info here](./lagrangian_traj.md)].
+*Objective: Simulate CTD observations from different platforms (rosette, underway CTD, gliders) and ADCP observations to evaluate different in situ sampling strategies*
+
+(1) `Step00a_interpolate_eNATL60_4D_outputs.py` 
+
+Interpolate eNATL60 model outputs onto a regular grid with a horizontal resolution of 1/60º for each time step and at each depth layer. Before starting the interpolation, we mask the 0 unreal values in the original data to exclude them from the interpolation. Then, we save the interpolated model data in a netcdf file for each variable (T, S, U and V), for each region (Atlantic or Mediterranean) and for each period (January or September). We use the interpolated data to extract the corresponding pseudo-observations in Step 2. NOTE: U and V are not zonal and meridional velocities. They are velocities along the original x and y axis. Then, if the objective is to extract ADCP velocity, they need to be rotated. 
+
+(2) Define sampling strategies:
+
+`Step01_define_sampling_strategy_CTD_ADCP.py`
+
+Define sampling strategy with rosette CTD: get (time, lon, lat, dep) of each cast. Valid for reference configuration and configurations 1, 2 and 4. MedSea and Atlantic.
+
+`Step01_define_sampling_strategy_gliders.py`
+
+Define sampling strategy with gliders: get (time, lon, lat, dep) of each profile. Valid for configuration 5. MedSea and Atlantic.
+
+`Step01_define_sampling_strategy_uCTD.py`
+
+Define sampling strategy with underway CTD: get (time, lon, lat, dep) of each profile. Valid for configuration 3. MedSea and Atlantic.
+
+(3) `Step02_extract_pseudo-obs_from_models.py`
+
+Extract pseudo-observations of temperature, salinity and ADCP horizontal velocities.
+
+(4) `Step03_plot_pseudo-obs.py`
+
+Plot pseudo-observations.
+
+(5) `Step31_simulate_pseudo-obs_error.py`
+
+Simulate random error for CTD and ADCP pseudo-observations, following a Gaussian distribution with a standard deviation defined by the instrumental error. Different (uncorrelated) for each observations. Following Gasparin et al., 2019.
+
+Toolbox: `EuroSea_toolbox.py`
+

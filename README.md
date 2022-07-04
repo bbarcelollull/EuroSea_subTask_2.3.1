@@ -15,6 +15,9 @@ Subtask 2.3.1 aims to **evaluate different in situ sampling strategies to recons
 * _Where?_<br>
 The analysis  focuses on two regions of interest: **(i) the western Mediterranean Sea and (ii) the Subpolar North West Atlantic**. In the western Mediterranean Sea, the target area is located within a swath of SWOT, while in the North West Atlantic the region of study includes a crossover of  SWOT during the fast-sampling phase. 
 
+## Report with the full analysis
+
+The full analysis will be published soon in D2.3 at the [EuroSea website](https://eurosea.eu/).
 
 ## The codes:
 

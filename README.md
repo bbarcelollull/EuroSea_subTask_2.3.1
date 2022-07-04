@@ -114,7 +114,7 @@ Ocean truth: Plot 1 figure for each region, model and variable, including all co
 
 (5) `Step10c_extract_model_data_for_comparison_spatio-temporal_OI_bigger_domain.py`
 
-Extract 2D model data within a domain bigger than the corresponding configuration and linearly interpolate model fields to the time of the OI map. (for CMEMS 3D data, we use data at the upper layer). Save fields, to be used in Step12f.
+Extract 2D model data within a domain bigger than the corresponding configuration and linearly interpolate model fields to the time of the OI map. Save fields, to be used in Step12f.
 
 (6) `Step12f_compute_statistics_spatio-temporal_OI_limit_domain.py`
 

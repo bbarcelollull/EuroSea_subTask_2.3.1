@@ -61,3 +61,30 @@ Simulate random error for CTD and ADCP pseudo-observations, following a Gaussian
 
 Toolbox: `EuroSea_toolbox.py`
 
+### 2_reconstruct_observations_spatiotemporal_OI
+
+*Objective: Reconstruct observations with the spatio-temporal optimal interpolation*
+
+(1) `Step05b_spatio-temporal_optimal_interpolation_T_and_S.py`
+
+Reconstruct pseudo-observations of T and S applying linear interpolation on the vertical and
+the spatio-temporal optimal interpolation horizontally. For all configurations, in the Atlantic and Mediterranean, for all models.
+
+For T and S: noise-to-signal error 3%, Lx = Ly = 20 km, Lt = 10 days.
+Not done for U and V but the code is ready. 
+
+Time of the resulting OI map: central date of each configuration.
+
+
+(2) `Step07b_calculate_dh_vgeo_spatio-temporal_OI.py` 
+
+From the reconstructed T and S 3D fields: compute DH, (ug, vg), and Rog. For all configurations, in the Atlantic and Mediterranean, for all models.
+    
+(3) `Step08b_figures_to_check_reconstructed_fields_spatio-temporal_OI.py` 
+
+Plot figures to check reconstructed fields with the spatio-temporal OI.
+
+Plot for each configuration: T (with observations) + S (with observations) + dh+vgeo
+
+Toolboxes: `EuroSea_toolbox.py`, `deriv_tools.py`, `Tools_OI.py`
+

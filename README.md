@@ -1,7 +1,7 @@
 # H2020 EuroSea project - Task 2.3
 
 ### This repository includes the codes generated in subtask 2.3.1 of the EuroSea project to evaluate different in situ sampling strategies to reconstruct fine-scale (>20 km) ocean currents in the context of SWOT. 
-In **1_simulate_observations** you can find codes to design the sampling strategy and to extract the simulated observations. In **2_reconstruct_observations_spatiotemporal_OI** the spatio-temporal optimal interpolation is applied to simulated observations of temperature and salinity. The dynamic height and geostrophic velocity are calculated from the reconstructed fields. In **3_evaluation** you can find the codes to compare reconstructed fields with the ocean truth.
+In **1_simulate_observations** you can find codes to design the sampling strategy and to extract the simulated observations. In **2_reconstruct_observations_spatiotemporal_OI** the spatio-temporal optimal interpolation is applied to simulated observations of temperature and salinity. The dynamic height and geostrophic velocity are calculated from the reconstructed fields. In **3_evaluation** you can find the codes to compare reconstructed fields with the ocean truth. Below there is a step-by-step description of all codes.
 
 * _H2020 EuroSea project:_<br>
 The H2020 EuroSea project aims at improving and integrating the European Ocean Observing and Forecasting System (see official website: [https://eurosea.eu/](https://eurosea.eu/)). It has received funding from the European Union’s Horizon 2020  research and innovation programme under grant agreement No 862626.

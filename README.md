@@ -14,7 +14,7 @@ Contributors to task 2.3 are CSIC (Lead), CLS, SOCIB, IMT and Ocean-Next.
 Subtask 2.3.1 aims to **evaluate different in situ sampling strategies to reconstruct fine-scale ocean currents (~20 km) in the context of SWOT**. An advanced version of the classic optimal interpolation used in field experiments, which considers the spatial and temporal variability of the observations, has been applied to reconstruct different configurations with the objective to evaluate the best sampling strategy to validate SWOT. 
 
 * _Where?_<br>
-The analysis  focuses on two regions of interest: **(i) the western Mediterranean Sea and (ii) the Subpolar North West Atlantic**. In the western Mediterranean Sea, the target area is located within a swath of SWOT, while in the North West Atlantic the region of study includes a crossover of  SWOT during the fast-sampling phase. 
+The analysis  focuses on two regions of interest: **(i) the western Mediterranean Sea and (ii) the subpolar northwest Atlantic**. In the western Mediterranean Sea, the target area is located within a swath of SWOT, while in the northwest Atlantic the region of study includes a crossover of  SWOT during the fast-sampling phase. 
 
 ## Report with the full analysis
 

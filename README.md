@@ -20,6 +20,11 @@ The analysis  focuses on two regions of interest: **(i) the western Mediterranea
 
 The full analysis is published in this report: [Barceló-Llull et al., 2022](https://doi.org/10.3289/eurosea_d2.3).
 
+## Dataset
+
+The dataset generated is Subtask 2.3.1 is available here: Bàrbara Barceló-Llull, Ananda Pascual, Aurélie Albert, Jaime Hernández-Lasheras, Stephanie Leroux, & Baptiste Mourre. (2022). Dataset generated to evaluate in situ sampling strategies to reconstruct fine-scale ocean currents in the context of SWOT satellite mission (H2020 EuroSea project) (V1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.6798018
+
+
 ## The codes
 
 The codes are organized into 3 folders:

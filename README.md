@@ -7,7 +7,7 @@ In **1_simulate_observations** you can find codes to design the sampling strateg
 The H2020 EuroSea project aims at improving and integrating the European Ocean Observing and Forecasting System (see official website: [https://eurosea.eu/](https://eurosea.eu/)). It has received funding from the European Union’s Horizon 2020  research and innovation programme under grant agreement No 862626.
 
 * _Task 2.3:_<br>
-Task 2.3 has the objective to improve the design of multi-platform experiments aimed to validate the Surface Water and Ocean Topography (SWOT) satellite observations with the goal to optimize the utility of these observing platforms. Observing System Simulation Experiments (OSSEs) have been conducted to evaluate different configurations of the in situ observing system, including rosette and underway CTD, gliders, conventional satellite nadir altimetry and velocities from drifters. High-resolution models have been used to simulate the observations and to represent the “ocean truth”. Several methods of reconstruction have been tested: spatio-temporal optimal interpolation, machine-learning techniques, model data assimilation and the MIOST tool. Contributors to Task 2.3 are CSIC (Spain), CLS (France), SOCIB (Spain), IMT-Atlantique (France) and Ocean-Next (France). **The planned OSSEs are detailed in this public report [Barceló-Llull et al., 2020](https://doi.org/10.3289/eurosea_d2.1) and the complete analysis is available here [Barceló-Llull et al., 2022](https://doi.org/10.3289/eurosea_d2.3).**
+Task 2.3 has the objective to improve the design of multi-platform experiments aimed to validate the Surface Water and Ocean Topography (SWOT) satellite observations with the goal to optimize the utility of these observing platforms. Observing System Simulation Experiments (OSSEs) have been conducted to evaluate different configurations of the in situ observing system, including rosette and underway CTD, gliders, conventional satellite nadir altimetry and velocities from drifters. High-resolution models have been used to simulate the observations and to represent the “ocean truth”. Several methods of reconstruction have been tested: spatio-temporal optimal interpolation, machine-learning techniques, model data assimilation and the MIOST tool. Contributors to Task 2.3 are CSIC (Spain), CLS (France), SOCIB (Spain), IMT-Atlantique (France) and Ocean-Next (France). **The planned OSSEs are detailed in this public report [Barceló-Llull et al. (2020)](https://doi.org/10.3289/eurosea_d2.1) and the complete analysis is available here [Barceló-Llull et al. (2022)](https://doi.org/10.3289/eurosea_d2.3).**
 
 * _Subtask 2.3.1:_<br>
 Subtask 2.3.1 aims to **evaluate different in situ sampling strategies to reconstruct fine-scale ocean currents (~20 km) in the context of SWOT**. An advanced version of the classic optimal interpolation used in field experiments, which considers the spatial and temporal variability of the observations, has been applied to reconstruct different configurations with the objective to evaluate the best sampling strategy to validate SWOT. 
@@ -17,7 +17,7 @@ The analysis  focuses on two regions of interest: **(i) the western Mediterranea
 
 ## Report with the full analysis
 
-The complete analysis can be found in this report: [Barceló-Llull et al., 2022](https://doi.org/10.3289/eurosea_d2.3).
+The complete analysis can be found in this report: [Barceló-Llull et al. (2022)](https://doi.org/10.3289/eurosea_d2.3).
 
 ## Dataset
 
